@@ -28,5 +28,10 @@ namespace day13_find_max
             var max=MaxValue(this.value);
             return max;
         }
+        public string PrintMax()
+        {
+            var max=MaxValue(this.value);
+            return "the maximum number is :" + max;
+        }
     }
 }

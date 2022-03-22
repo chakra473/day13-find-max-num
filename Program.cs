@@ -14,7 +14,7 @@ namespace day13_find_max
                 arr[i] =int.Parse(Console.ReadLine());
             }
             GenericClass<int> intMax=new GenericClass<int>(arr);
-            Console.WriteLine(intMax.MaxMethod());
+            Console.WriteLine(intMax.PrintMax());
             Console.WriteLine("enter the float values");
             float[] arrFloat=new float[5];
             for(int i = 0; i < arrFloat.Length; i++)
@@ -22,7 +22,7 @@ namespace day13_find_max
                 arrFloat[i]= float.Parse(Console.ReadLine());
             }
             GenericClass<float> floatMax=new GenericClass<float>(arrFloat);
-            Console.WriteLine(floatMax.MaxMethod());
+            Console.WriteLine(floatMax.PrintMax());
             Console.WriteLine("enter the string values");
             string [] arrString=new string[5];
             for(int i=0; i < arrString.Length; i++)
@@ -30,7 +30,7 @@ namespace day13_find_max
                 arrString[i]= Console.ReadLine();
             }
             GenericClass<string> stringMax=new GenericClass<string>(arrString);
-            Console.WriteLine(stringMax.MaxMethod());
+            Console.WriteLine(stringMax.PrintMax());
 
         }
        
