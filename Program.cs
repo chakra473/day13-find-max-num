@@ -19,6 +19,12 @@ namespace day13_find_max
             double f=double.Parse(Console.ReadLine());
             Console.WriteLine("the maximum double number among three number is :");
             Console.WriteLine(FindMaxDouble(d, e, f));
+            Console.WriteLine("the three string");
+            string g=Console.ReadLine();
+            string h=Console.ReadLine();
+            string i=Console.ReadLine();
+            Console.WriteLine("the maximum among three string is :");
+            Console.WriteLine(FindMaxString(i, g, h));
 
 
         }
@@ -39,6 +45,22 @@ namespace day13_find_max
             return a;
         }
         public static double FindMaxDouble(double a, double b, double c)
+        {
+            if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
+            {
+                return a;
+            }
+            else if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 || b.CompareTo(a) >= 0 && b.CompareTo(c) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) >= 0)
+            {
+                return b;
+            }
+            else if (c.CompareTo(b) > 0 && c.CompareTo(a) > 0 || c.CompareTo(b) >= 0 && c.CompareTo(a) > 0 || c.CompareTo(b) > 0 && c.CompareTo(a) >= 0)
+            {
+                return c;
+            }
+            return a;
+        }
+        public static string FindMaxString(string a, string b, string c)
         {
             if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
             {
