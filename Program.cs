@@ -13,22 +13,23 @@ namespace day13_find_max
             int b=int.Parse(Console.ReadLine());
             int c=int.Parse(Console.ReadLine());
             Console.WriteLine("the maximum number among three number is :");
-            GenericClass<int> IntMax=new GenericClass<int>();
-            Console.WriteLine(IntMax.FindMax(a, b, c));
+            GenericClass<int> IntMax=new GenericClass<int>(a,b,c);
+            Console.WriteLine(IntMax.FindMaxMethod());
             Console.WriteLine("enter three double numbers");
             double d = double.Parse(Console.ReadLine());
             double e = double.Parse(Console.ReadLine());
             double f = double.Parse(Console.ReadLine());
             Console.WriteLine("the maximum double number among three number is :");
-            GenericClass<double> DoubleMax=new GenericClass<double>();
-            Console.WriteLine(DoubleMax.FindMax(d, e, f));
+            GenericClass<double> DoubleMax=new GenericClass<double>(d,e,f);
+            Console.WriteLine(DoubleMax.FindMaxMethod());
             Console.WriteLine("the three string");
             string g = Console.ReadLine();
             string h = Console.ReadLine();
             string i = Console.ReadLine();
             Console.WriteLine("the maximum among three string is :");
-            GenericClass<string> StringMax=new GenericClass<string>();
-            Console.WriteLine(StringMax.FindMax(g, h, i));
+            GenericClass<string> StringMax=new GenericClass<string>(g,h,i);
+            Console.WriteLine(StringMax.FindMaxMethod());
+            
             
 
 

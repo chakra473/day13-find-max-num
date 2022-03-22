@@ -8,7 +8,12 @@ namespace day13_find_max
 {
     internal class GenericClass<T> where T : IComparable
     {
-        public  T FindMax(T a, T b, T c)
+        public T a,b,c;
+        public GenericClass(T a,T b,T c)
+        {
+            this.a = a; this.b = b; this.c = c;
+        }
+        public static T FindMax(T a, T b, T c)
         {
             if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
             {
@@ -23,6 +28,11 @@ namespace day13_find_max
                 return c;
             }
             return a;
+        }
+        public T FindMaxMethod()
+        {
+            T max=GenericClass<T>.FindMax(this.a,this.b,this.c);
+            return max;
         }
     }
 }
